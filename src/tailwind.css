@@ -96,4 +96,9 @@ border-radius: 0px 0px 6px 6px;
 }
 
 
+.gradient6
+{
+  background: linear-gradient(180deg, #FFE4E4 0%, #FFEDF8 100%);
+}
+
 
