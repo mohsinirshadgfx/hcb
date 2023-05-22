@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base{
+  @font-face{
+    font-family:"jameel-noori-nastaleeq";
+    src:url("../fonts/jameel-noori-nastaleeq.ttf") format("woff"),
+    url("../fonts/jameel-noori-nastaleeq.ttf") format("opentype"),
+    url("../fonts/jameel-noori-nastaleeq.ttf") format("truetype");
+  }
+} */
+
+
+.swiper-button-next, .swiper-button-prev {
+  background: #64748B !important;
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 50% !important;
+}
+
+.pagination-grey .swiper-button-next, .pagination-grey .swiper-button-prev
+{
+  width: auto !important;
+  height: auto !important;
+  background-color: transparent !important;
+  position: relative !important;
+  opacity: 1 !important;
+  left: auto !important;
+  right: auto !important;
+  display: inline-flex !important;
+  top: auto !important;
+}
+
+.pagination-grey .swiper-button-next::after, .pagination-grey .swiper-button-prev::after
+{
+  content: none !important;
+}
+
+
+.swiper-button-next:after, .swiper-button-prev:after {  
+  font-size: 20px !important;
+  color: #fff;
+}
+
+.pagination-grey .swiper-pagination-bullet
+{
+  background-color: #fff !important;
+  opacity: 1 !important;
+}
+.pagination-grey .swiper-pagination-bullet-active
+{
+background-color: #475569 !important;
+}
+
+.pagination-grey  .swiper-pagination
+{
+  position: relative !important;
+  margin-top: -6px !important;
+}
+
+.gradient1
+{
+  background: radial-gradient(96.68% 407.41% at 8.23% 3.32%, rgba(252, 221, 175, 0.95) 0%, rgba(255, 245, 151, 0.95) 100%, rgba(255, 252, 223, 0.95) 100%);
+backdrop-filter: blur(2px);
+border-radius: 0px 0px 6px 6px;
+}
+
+.gradient2
+{
+  background: radial-gradient(96.68% 407.41% at 8.23% 3.32%, rgba(208, 255, 230, 0.95) 0%, rgba(255, 250, 200, 0.95) 100%);
+backdrop-filter: blur(2px);
+border-radius: 0px 0px 6px 6px;
+}
+
+
+.gradient3
+{
+  background: radial-gradient(96.68% 407.41% at 8.23% 3.32%, rgba(221, 213, 255, 0.95) 0%, rgba(210, 250, 255, 0.95) 100%);
+  backdrop-filter: blur(2px);
+  border-radius: 0px 0px 6px 6px;
+}
+
+.gradient4
+{
+  background: radial-gradient(96.68% 407.41% at 8.23% 3.32%, rgba(255, 224, 232, 0.95) 0%, rgba(248, 220, 255, 0.95) 100%);
+backdrop-filter: blur(2px);
+border-radius: 0px 0px 6px 6px;
+}
+
+.gradient5
+{
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(7.43139px);
+  border-radius: 0px 0px 6px 6px;
+}
+
+
+
