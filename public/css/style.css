@@ -803,6 +803,9 @@ select {
 .mt-8 {
   margin-top: 2rem;
 }
+.mt-7 {
+  margin-top: 1.75rem;
+}
 .block {
   display: block;
 }
