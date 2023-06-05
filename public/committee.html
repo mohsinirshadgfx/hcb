@@ -36,6 +36,27 @@
       src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"
     ></script>
 
+    <style>
+      /* bootstrap mediaqueries */
+         @media (max-width: 767.98px) {
+            .fb_iframe_widget span,
+            .fb_iframe_widget_fluid span,
+            .fb_iframe_widget iframe {
+               width: 100% !important;
+            }
+         }
+      /* custom css */
+         .mobile_menu {
+            position: absolute;
+            z-index: 100;
+            background: #fff;
+            padding: 25px;
+            left: 0;
+            width: 100%;
+            top: 72px;
+            height: 100%;
+         }
+   </style>
     
   </head>
 
@@ -56,10 +77,11 @@
           <div class="flex items-center lg:order-2">
             <a
               href="#"
-              class="text-white dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800 inline-flex items-center uppercase"
+              class="text-white dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800 inline-flex items-center uppercase"
             >
               Sign In
-              <svg
+              <span class="hidden md:block">
+                <svg
                 width="29"
                 height="26"
                 class="ml-2"
@@ -68,11 +90,15 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M29 5.48492V19.9849C29 22.988 26.5656 25.4224 23.5625 25.4224H19.4844C18.7311 25.4224 18.125 24.8164 18.125 24.063C18.125 23.312 18.7339 22.7037 19.4844 22.7037H23.5625C25.0578 22.7037 26.2812 21.4802 26.2812 19.9849V5.48492C26.2812 3.98961 25.0578 2.76617 23.5625 2.76617H19.4844C18.7311 2.76617 18.125 2.15729 18.125 1.4068C18.125 0.655745 18.7311 0.0474243 19.4844 0.0474243H23.5625C26.5645 0.0474243 29 2.48184 29 5.48492ZM20.8381 13.7488L12.2061 21.3216C11.8549 21.6332 11.4018 21.7974 10.9486 21.7974C10.6831 21.7974 10.4159 21.7426 10.1647 21.6293C9.49297 21.3273 9.0625 20.6703 9.0625 19.9453V16.813H2.26562C1.01613 16.813 0 15.7992 0 14.5474V10.9224C0 9.67293 1.01613 8.6568 2.26562 8.6568H9.0625V5.52457C9.0625 4.8024 9.49438 4.14198 10.1619 3.84121C10.8467 3.53422 11.651 3.65487 12.2061 4.14821L20.8381 11.7154C21.1326 11.9759 21.2969 12.3441 21.2969 12.7349C21.2969 13.1257 21.1326 13.4939 20.8381 13.7488ZM17.8871 12.7349L11.7812 7.35973V11.3755H2.71875V14.0943H11.7812V18.0608L17.8871 12.7349Z"
-                  fill="white"
-                />
-              </svg>
+                   d="M29 5.48492V19.9849C29 22.988 26.5656 25.4224 23.5625 25.4224H19.4844C18.7311 25.4224 18.125 24.8164 18.125 24.063C18.125 23.312 18.7339 22.7037 19.4844 22.7037H23.5625C25.0578 22.7037 26.2812 21.4802 26.2812 19.9849V5.48492C26.2812 3.98961 25.0578 2.76617 23.5625 2.76617H19.4844C18.7311 2.76617 18.125 2.15729 18.125 1.4068C18.125 0.655745 18.7311 0.0474243 19.4844 0.0474243H23.5625C26.5645 0.0474243 29 2.48184 29 5.48492ZM20.8381 13.7488L12.2061 21.3216C11.8549 21.6332 11.4018 21.7974 10.9486 21.7974C10.6831 21.7974 10.4159 21.7426 10.1647 21.6293C9.49297 21.3273 9.0625 20.6703 9.0625 19.9453V16.813H2.26562C1.01613 16.813 0 15.7992 0 14.5474V10.9224C0 9.67293 1.01613 8.6568 2.26562 8.6568H9.0625V5.52457C9.0625 4.8024 9.49438 4.14198 10.1619 3.84121C10.8467 3.53422 11.651 3.65487 12.2061 4.14821L20.8381 11.7154C21.1326 11.9759 21.2969 12.3441 21.2969 12.7349C21.2969 13.1257 21.1326 13.4939 20.8381 13.7488ZM17.8871 12.7349L11.7812 7.35973V11.3755H2.71875V14.0943H11.7812V18.0608L17.8871 12.7349Z"
+                   fill="white"
+                   />
+             </svg>
+             </span>
             </a>
+            <span class="block md:hidden">
+              <img src="img/menu-line.svg" id="mobile-menu-button" class="w-10 p-2 rounded-full bg-sky-500" />                      
+           </span>
           </div>
         </div>
       </nav>
@@ -125,10 +151,10 @@
 
     <div class="container">
       <div class="grid md:grid-cols-12 gap-7">
-        <div class="md:col-span-3">
+        <div id="mobile-menu" class="hidden md:block md:col-span-3">
           <aside
             id="sidebar-switch"
-            class="z-40 w-full transition-transform -translate-x-full sm:translate-x-0"
+            class="z-40 w-full transition-transform sm:translate-x-0"
             aria-label="Sidebar"
           >
             <div class="h-full px-3 py-4 overflow-y-auto dark:border-gray-700">
@@ -322,7 +348,8 @@
          
          <h2 class="pb-3 mb-5 text-2xl font-bold text-gray-900 border-b border-gray-200">Standing Committee</h2>
 
-          <div class="grid grid-cols-3 gap-8 mb-10">
+         
+          <div class="grid grid-cols-1 gap-2 mb-10 sm:grid-cols-2 sm:gap-4 md:grid-cols-3"> 
 
             <div class="px-4 py-3 bg-white drop-shadow-md rounded-xl">
               <img src="img/lawyer2.jpg" class="table m-auto mb-3 rounded-full w-28 h-28 drop-shadow-md" />                    
@@ -487,46 +514,37 @@
 
     
 
-        <footer class="bg-sky-600 py-9">
-
-          <div class="container">
-            
-            <div class="relative grid grid-cols-2 gap-10 mt-6">
-
-              <div>
-              <a href="javascript:" class="inline-flex mb-10"><img src="img/logo-footer.svg" alt="High Coutr Bar | Rawalpindi Association" /> </a>
-
-              <ul class="flex flex-row mt-0 space-x-4 text-sm font-medium text-white">
-                <li>
-                  <a href="#" class="text-base text-white hover:underline" aria-current="page">© 2022 wooqlaw</a>
-                </li>
-                <li>|</li>
-                <li>
-                  <a href="#" class="text-base text-white hover:underline">Terms of Use</a>
-                </li>
-                <li>|</li>
-                <li>
-                  <a href="#" class="text-base text-white hover:underline">Privacy Policy</a>
-                </li>
-                
-              </ul>
+    <footer class="bg-sky-600 py-9">
+      <div class="container">
+         <div class="relative grid grid-cols-1 gap-10 mt-6 md:grid-cols-2">
+            <div>
+               <a href="javascript:" class="inline-flex mb-10"><img src="img/logo-footer.svg" alt="High Coutr Bar | Rawalpindi Association" /> </a>
+               <ul class="flex flex-row mt-0 space-x-4 text-sm font-medium text-white">
+                  <li>
+                     <a href="#" class="text-base text-white hover:underline" aria-current="page">© 2022 wooqlaw</a>
+                  </li>
+                  <li>|</li>
+                  <li>
+                     <a href="#" class="text-base text-white hover:underline">Terms of Use</a>
+                  </li>
+                  <li>|</li>
+                  <li>
+                     <a href="#" class="text-base text-white hover:underline">Privacy Policy</a>
+                  </li>
+               </ul>
             </div>
-
-            
-              <div class="absolute right-0 flex items-end justify-end gap-8 -top-24">
-                <a href="javasript:"><img src="img/poweredby.svg" alt="Kartoa Technologies" /> </a>
-                <div class="p-6 bg-white rounded-lg shadow-md w-80">
-                <a href="javascript:" class="inline-flex mb-6"><img src="img/wooqlaw.svg" alt="" /></a>
-                <h1 class="mb-0 text-2xl font-bold text-gray-600">Join wooqlaw Today! </h1>
-                <p class="mb-5 leading-5">Be part Pakistan #1 lawyer search portal and seek full potenial of your law career.</p>
-                <a href="" class="px-6 py-2 leading-tight text-white rounded-full bg-violet-600 hover:bg-violet-800">Join Now</a>
-              </div>
+            <div class="right-0 items-end justify-center flex-initial block gap-8 md:justify-end md:flex md:absolute -top-24">
+               <a href="javasript:"><img src="img/poweredby.svg" class="pb-3 m-auto md:pb-0 md:mb-0" alt="Kartoa Technologies" /> </a>
+               <div class="p-6 m-auto bg-white rounded-lg shadow-md w-80 md:m-0">
+                  <a href="javascript:" class="inline-flex mb-6"><img src="img/wooqlaw.svg" alt="" /></a>
+                  <h1 class="mb-0 text-2xl font-bold text-gray-600">Join wooqlaw Today! </h1>
+                  <p class="mb-5 leading-5">Be part Pakistan #1 lawyer search portal and seek full potenial of your law career.</p>
+                  <a href="" class="px-6 py-2 leading-tight text-white rounded-full bg-violet-600 hover:bg-violet-800">Join Now</a>
+               </div>
             </div>
-            </div>
-
-          </div>
-
-        </footer>
+         </div>
+      </div>
+   </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mylawyers", {
@@ -552,6 +570,12 @@
       },
           
         });
+
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+            document.getElementById('mobile-menu').classList.toggle('mobile_menu');
+            
+         });
       </script>
       
   </body>
