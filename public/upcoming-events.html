@@ -82,51 +82,56 @@
         </div>
       </nav>
     </header>
-    <nav class="mb-6 bg-gray-200">
-      <div
-        class="flex items-center justify-center max-w-screen-xl px-4 py-6 mx-auto md:px-6"
-      >
-        <div class="flex items-center">
-          <ul
-            class="flex flex-row items-center m-auto mt-0 space-x-4 text-sm font-medium align-middle"
-          >
-            <li>
-              <a
-                href="#"
-                class="text-base text-gray-600 hover:underline"
-                aria-current="page"
-                >About Us</a
-              >
-            </li>
-            <li>|</li>
-            <li>
-              <a href="#" class="text-base text-gray-600 hover:underline"
-                >Lawyer Resources</a
-              >
-            </li>
-            <li>|</li>
-            <li>
-              <a href="#" class="text-base text-gray-600 hover:underline"
-                >Public Resources</a
-              >
-            </li>
-            <li>|</li>
 
-            <li class="hidden md:inline">
-              <a href="#" class="text-base text-gray-600 hover:underline"
-                >Membership Benefits</a
-              >
-            </li>
-            <li>|</li>
-            <li class="hidden md:inline">
-              <a href="#" class="text-base text-gray-600 hover:underline"
-                >Online Store</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <!-- Navbar goes here -->
+		<nav class="mb-6 bg-gray-200 ">
+			<div class="flex items-center justify-end max-w-screen-xl px-4 py-6 mx-auto md:justify-center md:px-6">
+				<div class="flex justify-between">
+					<div class="flex space-x-7">
+						
+						<!-- Primary Navbar items -->
+						<ul class="flex-row items-center hidden m-auto mt-0 space-x-4 text-sm font-medium align-middle md:flex smooth-gallery">
+                     <li><a href="" class="text-base text-gray-600 hover:underline">About Us</a></li>
+                     <li>|</li>
+                     <li><a href="" class="text-base text-gray-600 hover:underline">Lawyer Resources</a></li>
+                     <li>|</li>
+                     <li><a href="" class="text-base text-gray-600 hover:underline">Public Resources</a></li>
+                     <li>|</li>
+                     <li><a href="" class="text-base text-gray-600 hover:underline">Membership Benefits</a></li>
+                     <li>|</li>
+                     <li><a href="" class="text-base text-gray-600 hover:underline">Online Store</a></li>             
+						</ul>
+					</div>
+					<!-- Mobile menu button -->
+					<div class="flex items-center md:hidden">
+						<button class="outline-none mobile-menu-button">
+						<svg class="w-6 h-6 text-gray-500 hover:text-sky-500"
+							x-show="!showMenu"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+					</button>
+					</div>
+				</div>
+			</div>
+			<!-- mobile menu -->
+			<div class="hidden mobile-menu">
+				<ul class="">
+					<li class="active"><a href="index.html" class="block px-2 py-4 text-sm font-semibold text-white bg-sky-500">About Us</a></li>
+					<li><a href="#services" class="block px-2 py-4 text-sm transition duration-300 hover:bg-sky-500">Lawyer Resources</a></li>
+					<li><a href="#about" class="block px-2 py-4 text-sm transition duration-300 hover:bg-sky-500">Public Resources</a></li>
+					<li><a href="#contact" class="block px-2 py-4 text-sm transition duration-300 hover:bg-sky-500">Membership Benefits</a></li>
+               <li><a href="#contact" class="block px-2 py-4 text-sm transition duration-300 hover:bg-sky-500">Online Store</a></li>
+				</ul>
+			</div>
+		</nav>
+      <!-- Navbar goes here -->
 
     <div class="container">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-7">
@@ -326,12 +331,12 @@
          
          <h2 class="pb-3 mb-5 text-2xl font-bold text-gray-900 border-b border-gray-200">Upcoming Events</h2>
 
-          <div class="grid grid-cols-2 gap-8 mb-40">
+          <div class="grid grid-cols-1 gap-8 mb-40 sm:grid-cols-2">
 
             <div class="relative">
-              <img src="img/Events1.jpg" class="w-full h-full rounded-md shadow-lg" />
+              <img src="img/Events1.jpg" class="w-full h-auto rounded-md shadow-lg lg:object-cover" />
               <span class="absolute px-4 py-1 text-white bg-red-500 rounded-full top-3 left-3">LIVE</span>              
-              <div class="absolute bottom-0 left-0 w-full p-5 pt-7 gradient1">
+              <div class="bottom-0 left-0 flex-initial w-full p-5 lg:absolute pt-7 gradient1">
                 <h2 class="mb-8 text-xl font-semibold text-black">Senior board member monthly meeting</h2>
                 <a href="" class="absolute px-3 py-2 bg-white rounded-md shadow-lg right-4 -top-5">View Details</a>
                 
@@ -369,9 +374,9 @@
             </div>
 
             <div class="relative">
-              <img src="img/Events2.jpg" class="w-full h-full rounded-md shadow-lg" />
+              <img src="img/Events2.jpg" class="w-full h-auto rounded-md shadow-lg lg:object-cover" />
               <span class="absolute px-4 py-1 text-white rounded-full bg-sky-500 top-3 left-3">New</span>              
-              <div class="absolute bottom-0 left-0 w-full p-5 pt-7 gradient2">
+              <div class="bottom-0 left-0 flex-initial w-full p-5 lg:absolute pt-7 gradient2">
                 <h2 class="mb-8 text-xl font-semibold text-black">Bar Council Iftar Party</h2>
                 <a href="" class="absolute px-3 py-2 bg-white rounded-md shadow-lg right-4 -top-5">View Details</a>
                 
@@ -411,9 +416,9 @@
 
 
             <div class="relative">
-              <img src="img/Events3.jpg" class="w-full h-full rounded-md shadow-lg" />
+              <img src="img/Events3.jpg" class="w-full h-auto rounded-md shadow-lg lg:object-cover" />
                           
-              <div class="absolute bottom-0 left-0 w-full p-5 pt-7 gradient3">
+              <div class="bottom-0 left-0 flex-initial w-full p-5 lg:absolute pt-7 gradient3">
                 <h2 class="mb-8 text-xl font-semibold text-black">Protest for lawyers rights</h2>
                 <a href="" class="absolute px-3 py-2 bg-white rounded-md shadow-lg right-4 -top-5">View Details</a>
                 
@@ -453,9 +458,9 @@
 
 
             <div class="relative">
-              <img src="img/Events4.jpg" class="w-full h-full rounded-md shadow-lg" />
+              <img src="img/Events4.jpg" class="w-full h-auto rounded-md shadow-lg lg:object-cover" />
                            
-              <div class="absolute bottom-0 left-0 w-full p-5 pt-7 gradient4">
+              <div class="bottom-0 left-0 flex-initial w-full p-5 lg:absolute pt-7 gradient4">
                 <h2 class="mb-8 text-xl font-semibold text-black">Senior board member monthly meeting</h2>
                 <a href="" class="absolute px-3 py-2 bg-white rounded-md shadow-lg right-4 -top-5">View Details</a>
                 
@@ -565,6 +570,13 @@
             document.getElementById('mobile-menu').classList.toggle('hidden');
             document.getElementById('mobile-menu').classList.toggle('mobile_menu');
          });
+
+         const btn = document.querySelector("button.mobile-menu-button");
+			const menu = document.querySelector(".mobile-menu");
+
+         btn.addEventListener("click", () => {
+				menu.classList.toggle("hidden");
+			});
          
       </script>
       

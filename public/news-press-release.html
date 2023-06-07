@@ -82,51 +82,57 @@
         </div>
       </nav>
     </header>
-    <nav class="mb-6 bg-gray-200">
-      <div
-        class="flex items-center justify-center max-w-screen-xl px-4 py-6 mx-auto md:px-6"
-      >
-        <div class="flex items-center">
-          <ul
-            class="flex flex-row items-center m-auto mt-0 space-x-4 text-sm font-medium align-middle"
-          >
-            <li>
-              <a
-                href="#"
-                class="text-base text-gray-600 hover:underline"
-                aria-current="page"
-                >About Us</a
-              >
-            </li>
-            <li>|</li>
-            <li>
-              <a href="#" class="text-base text-gray-600 hover:underline"
-                >Lawyer Resources</a
-              >
-            </li>
-            <li>|</li>
-            <li>
-              <a href="#" class="text-base text-gray-600 hover:underline"
-                >Public Resources</a
-              >
-            </li>
-            <li>|</li>
 
-            <li class="hidden md:inline">
-              <a href="#" class="text-base text-gray-600 hover:underline"
-                >Membership Benefits</a
-              >
-            </li>
-            <li>|</li>
-            <li class="hidden md:inline">
-              <a href="#" class="text-base text-gray-600 hover:underline"
-                >Online Store</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+
+    <!-- Navbar goes here -->
+		<nav class="mb-6 bg-gray-200 ">
+			<div class="flex items-center justify-end max-w-screen-xl px-4 py-6 mx-auto md:justify-center md:px-6">
+				<div class="flex justify-between">
+					<div class="flex space-x-7">
+						
+						<!-- Primary Navbar items -->
+						<ul class="flex-row items-center hidden m-auto mt-0 space-x-4 text-sm font-medium align-middle md:flex smooth-gallery">
+                     <li><a href="" class="text-base text-gray-600 hover:underline">About Us</a></li>
+                     <li>|</li>
+                     <li><a href="" class="text-base text-gray-600 hover:underline">Lawyer Resources</a></li>
+                     <li>|</li>
+                     <li><a href="" class="text-base text-gray-600 hover:underline">Public Resources</a></li>
+                     <li>|</li>
+                     <li><a href="" class="text-base text-gray-600 hover:underline">Membership Benefits</a></li>
+                     <li>|</li>
+                     <li><a href="" class="text-base text-gray-600 hover:underline">Online Store</a></li>             
+						</ul>
+					</div>
+					<!-- Mobile menu button -->
+					<div class="flex items-center md:hidden">
+						<button class="outline-none mobile-menu-button">
+						<svg class="w-6 h-6 text-gray-500 hover:text-sky-500"
+							x-show="!showMenu"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+					</button>
+					</div>
+				</div>
+			</div>
+			<!-- mobile menu -->
+			<div class="hidden mobile-menu">
+				<ul class="">
+					<li class="active"><a href="index.html" class="block px-2 py-4 text-sm font-semibold text-white bg-sky-500">About Us</a></li>
+					<li><a href="#services" class="block px-2 py-4 text-sm transition duration-300 hover:bg-sky-500">Lawyer Resources</a></li>
+					<li><a href="#about" class="block px-2 py-4 text-sm transition duration-300 hover:bg-sky-500">Public Resources</a></li>
+					<li><a href="#contact" class="block px-2 py-4 text-sm transition duration-300 hover:bg-sky-500">Membership Benefits</a></li>
+               <li><a href="#contact" class="block px-2 py-4 text-sm transition duration-300 hover:bg-sky-500">Online Store</a></li>
+				</ul>
+			</div>
+		</nav>
+      <!-- Navbar goes here -->
 
     <div class="container">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-7">
@@ -323,6 +329,25 @@
             </div>
           </aside>
         </div>
+
+        <div class="block md:hidden md:col-span-3">
+
+          <div class="w-full px-3 py-3 bg-gray-100 rounded-md">
+            <h4 class="mb-2 text-black">Filter by</h4>             
+            <div class="relative">
+              <button id="dropdownBtn" class="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-md">
+                Dropdown
+              </button>
+              <ul id="dropdownList" class="absolute hidden w-40 py-2 overflow-hidden duration-300 ease-in-out bg-white rounded-md shadow-md transition-max-h max-h-0">
+                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Option 1</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Option 2</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Option 3</a></li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+
         <div class="md:mb-40 md:col-span-6">
          
          <h2 class="pb-3 mb-5 text-2xl font-bold text-gray-900 border-b border-gray-200">Upcoming Events</h2>
@@ -330,9 +355,9 @@
           <div class="grid grid-cols-1 mb-8">
 
             <div class="relative">
-              <img src="img/supreme-court.jpg" class="w-full h-full rounded-md shadow-lg" />
+              <img src="img/supreme-court.jpg" class="w-full h-auto rounded-md shadow-lg lg:object-cover" />
               <span class="absolute px-4 py-1 text-white rounded-full bg-sky-500 top-3 left-3">New</span>           
-              <div class="absolute bottom-0 left-0 w-full px-3 py-2 gradient5">
+              <div class="bottom-0 left-0 flex-initial w-full px-3 py-2 lg:absolute gradient2">
 
                 <span class="text-xs text-gray-600">2 August</span>
                 <h2 class="mb-8 text-xl font-semibold text-black">Dignified legal profession and Responsibility of govt.during Corona Crisis.</h2>
@@ -356,11 +381,11 @@
             </div>
           </div>
           
-            <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="grid grid-cols-1 gap-4 mb-8 md:grid-cols-2">
               <div class="relative">
-                <img src="img/supreme-court1.jpg" class="w-full h-full rounded-md shadow-lg" />
+                <img src="img/supreme-court1.jpg" class="w-full h-auto rounded-md shadow-lg lg:object-cover" />
                        
-                <div class="absolute bottom-0 left-0 w-full px-3 py-2 gradient5">
+                <div class="bottom-0 left-0 flex-initial w-full px-3 py-2 md:absolute gradient3">
   
                  
                   <span class="text-xs text-gray-600">2 August</span>
@@ -379,11 +404,12 @@
                         
                 </div>
               </div>
-            <div class="relative">                                     
-              <div class="absolute bottom-0 left-0 w-full h-full rounded-md gradient6">
-
-                 <div class="absolute bottom-0 left-0 w-full p-5 pt-7">
-                
+              <div class="relative">
+                <img src="img/supreme-court1.jpg" class="w-full h-auto rounded-md shadow-lg lg:object-cover" />
+                       
+                <div class="bottom-0 left-0 flex-initial w-full px-3 py-2 lg:absolute gradient4">
+  
+                 
                   <span class="text-xs text-gray-600">2 August</span>
                   <h2 class="mb-8 text-xl font-semibold text-black">Prevention of Hoarding ordinance 2020</h2>
                   <div class="inline-flex items-center w-auto gap-2 mr-3 text-sm">
@@ -396,17 +422,17 @@
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0069 12C23.0069 17.9408 18.1908 22.7569 12.25 22.7569C6.30915 22.7569 1.49314 17.9408 1.49314 12C1.49314 6.05915 6.30915 1.24314 12.25 1.24314C18.1908 1.24314 23.0069 6.05915 23.0069 12ZM23.75 12C23.75 18.3513 18.6013 23.5 12.25 23.5C5.89873 23.5 0.75 18.3513 0.75 12C0.75 5.64873 5.89873 0.5 12.25 0.5C18.6013 0.5 23.75 5.64873 23.75 12ZM12.25 15.0001C13.8457 15.0001 15.1389 13.881 15.1389 12.5001C15.1389 11.1193 13.8457 10.0001 12.25 10.0001C10.6543 10.0001 9.36111 11.1193 9.36111 12.5001C9.36111 13.881 10.6543 15.0001 12.25 15.0001ZM10.0833 12.5001C10.0833 11.4474 11.0335 10.6251 12.25 10.6251C13.4462 10.6251 14.4167 11.4474 14.4167 12.5001C14.4167 13.5353 13.4462 14.3751 12.25 14.3751C11.0335 14.3751 10.0833 13.5353 10.0833 12.5001ZM18.6936 12.2599C18.3596 11.545 17.6531 10.547 16.5969 9.69934C15.5339 8.84465 14.0736 8.12512 12.25 8.12512C10.4264 8.12512 8.96615 8.84465 7.90358 9.69934C6.84733 10.547 6.14136 11.545 5.80555 12.2599C5.73148 12.4142 5.73148 12.5861 5.80555 12.7404C6.14136 13.4376 6.84733 14.4357 7.90358 15.3009C8.96615 16.1564 10.4264 16.8751 12.25 16.8751C14.0736 16.8751 15.5339 16.1564 16.5969 15.3009C17.6531 14.4357 18.3596 13.4376 18.6936 12.7404C18.7681 12.5861 18.7681 12.4142 18.6936 12.2599ZM8.39514 14.8439C7.42308 14.0626 6.77308 13.1251 6.47223 12.5001C6.77308 11.8575 7.42308 10.92 8.39514 10.1564C9.36788 9.37493 10.6611 8.75012 12.25 8.75012C13.8389 8.75012 15.1321 9.37493 16.1049 10.1564C17.0776 10.92 17.7276 11.8575 18.0278 12.5001C17.7276 13.1251 17.0776 14.0626 16.1049 14.8439C15.1321 15.6251 13.8389 16.2501 12.25 16.2501C10.6611 16.2501 9.36788 15.6251 8.39514 14.8439Z" fill="#475569"/>
                           </svg>                                            
                           26 Likes</div>
-
-                          </div>
+  
+                        
+                </div>
               </div>
-            </div>
 
-</div>
+            </div>
 <div class="grid grid-cols-1 mb-8">
 
   <div class="relative">
-    <img src="img/supreme-court.jpg" class="w-full h-full rounded-md shadow-lg" />
-    <div class="absolute bottom-0 left-0 w-full px-3 py-2 gradient5">
+    <img src="img/supreme-court.jpg" class="w-full h-auto rounded-md shadow-lg lg:object-cover" />
+    <div class="bottom-0 left-0 flex-initial w-full px-3 py-2 lg:absolute gradient3">
 
       <span class="text-xs text-gray-600">2 August</span>
       <h2 class="mb-8 text-xl font-semibold text-black">Dignified legal profession and Responsibility of govt.during Corona Crisis.</h2>
@@ -429,11 +455,11 @@
     </div>
   </div>
 </div>
-<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="grid grid-cols-1 gap-4 mb-8 md:grid-cols-2">
   <div class="relative">
-    <img src="img/supreme-court2.jpg" class="w-full h-full rounded-md shadow-lg" />
+    <img src="img/supreme-court2.jpg" class="w-full h-auto rounded-md shadow-lg lg:object-cover" />
            
-    <div class="absolute bottom-0 left-0 w-full px-3 py-2 gradient5">
+    <div class="bottom-0 left-0 flex-initial w-full px-3 py-2 lg:absolute gradient4">
 
      
       <span class="text-xs text-gray-600">2 August</span>
@@ -455,8 +481,8 @@
 
 
   <div class="relative">
-    <img src="img/supreme-court3.jpg" class="w-full h-full rounded-md shadow-lg" />           
-    <div class="absolute bottom-0 left-0 w-full px-3 py-2 gradient5">
+    <img src="img/supreme-court3.jpg" class="w-full h-auto rounded-md shadow-lg lg:object-cover" />           
+    <div class="bottom-0 left-0 flex-initial w-full px-3 py-2 lg:absolute gradient3">
       <span class="text-xs text-gray-600">2 August</span>
       <h2 class="mb-8 text-xl font-semibold text-black">Prevention of Hoarding ordinance 2020</h2>
       <div class="inline-flex items-center w-auto gap-2 mr-3 text-sm">
@@ -479,7 +505,7 @@
     <div class="px-3 pt-3 bg-slate-100">
     <img src="img/bar-couuncil-3.jpg" class="w-full h-full rounded-t-lg " />
   </div>        
-    <div class="w-full px-3 py-2">
+    <div class="w-full px-3 py-2 gradient3">
       <span class="text-xs text-gray-600">2 August</span>
       <h2 class="mb-8 text-xl font-semibold text-black">Safe city project briefing, Choudry Nisar as a cheif guest.</h2>
       <div class="inline-flex items-center w-auto gap-2 mr-3 text-sm">
@@ -499,7 +525,7 @@
     <div class="px-3 pt-3 bg-slate-100">
     <img src="img/bar-couuncil-3.jpg" class="w-full h-full rounded-t-lg " />
   </div>        
-    <div class="w-full px-3 py-2">
+    <div class="w-full px-3 py-2 gradient4">
       <span class="text-xs text-gray-600">2 August</span>
       <h2 class="mb-8 text-xl font-semibold text-black">Safe city project briefing, Choudry Nisar as a cheif guest.</h2>
       <div class="inline-flex items-center w-auto gap-2 mr-3 text-sm">
@@ -520,7 +546,7 @@
 
 
         </div>
-        <div class="md:col-span-3">
+        <div class="hidden md:block md:col-span-3">
 
           <div class="w-full px-3 py-3 bg-gray-100 rounded-md">
 
@@ -595,6 +621,7 @@
           </div>
           
         </div>
+
       </div>
     </div>
 
@@ -661,6 +688,20 @@
             document.getElementById('mobile-menu').classList.toggle('hidden');
             document.getElementById('mobile-menu').classList.toggle('mobile_menu');
          });
+
+         const dropdownBtn = document.getElementById('dropdownBtn');
+          const dropdownList = document.getElementById('dropdownList');
+
+          dropdownBtn.addEventListener('click', function() {
+            dropdownList.classList.toggle('hidden');
+          });
+
+          const btn = document.querySelector("button.mobile-menu-button");
+			const menu = document.querySelector(".mobile-menu");
+
+         btn.addEventListener("click", () => {
+				menu.classList.toggle("hidden");
+			});
          
       </script>
       
